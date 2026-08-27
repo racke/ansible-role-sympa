@@ -79,6 +79,12 @@ That prevents owners to enable or disable archiving for a list.
 
 The roles can also given as comma-separated list, e.g `owner,privileged_owner`.
 
+## Blocklist
+
+The blocklist can be hidden in the web interface:
+
+    sympa_config_use_blocklist: 'none'
+
 ## Inclusion of data sources
 
 ### ODBC
