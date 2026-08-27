@@ -93,6 +93,11 @@ allow_account_deletion {{ sympa_config_allow_account_deletion | default('off')
 ## List creation request
 create_list {{ sympa_config_create_list }}
 
+{% if sympa_config_use_blocklist is defined %}
+## Blocklist
+use_blocklist {{ sympa_config_use_blocklist }}
+{% endif %}
+
 # Language
 {% if sympa_config_lang %}
 lang {{ sympa_config_lang }}
