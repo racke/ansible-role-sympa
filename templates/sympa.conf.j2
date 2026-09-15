@@ -134,6 +134,11 @@ max_size {{ sympa_config_max_size }}
 merge_feature {{ sympa_config_merge_feature | bool | ternary('on', 'off') }}
 {% endif %}
 
+{% if sympa_config_reject_mail_from_automates_feature is defined %}
+## Automatic emails
+reject_mail_from_automates_feature {{ sympa_config_reject_mail_from_automates_feature | bool | ternary('on', 'off') }}
+{% endif %}
+
 # Archiving
 {% if sympa_installation_method != 'package' %}
 mhonarc /usr/local/bin/mhonarc
